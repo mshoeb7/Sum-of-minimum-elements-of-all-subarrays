@@ -9,13 +9,13 @@ int sumSubarrayMins(int A[], int n)
 
 	stack<pair<int, int> > s1, s2;
 
-	// getting number of element strictly larger
-	// than A[i] on Left.
+	// getting number of element strictly larger than A[i] on Left.
+
 	for (int i = 0; i < n; ++i) {
 		int cnt = 1;
 
-		// get elements from stack until element
-		// greater than A[i] found
+		// get elements from stack until element greater than A[i] found
+		
 		while (!s1.empty() && (s1.top().first) > A[i]) {
 			cnt += s1.top().second;
 			s1.pop();
